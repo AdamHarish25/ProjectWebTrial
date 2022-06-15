@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="CssOnly/Output.css" />
+    <script src="JsOnly/Js1.js"></script>
+  </head>
+  <body onload="GenerateCaptcha();">
+    <!-- Div Parent for Register components -->
+    <div class="w-screen h-screen p-10 lg:p-20 relative pb-20">
+      <div
+        class="w-full h-fit absolute left-1/2 top-1/4 -translate-x-1/2 -translate-y-1/2"
+      >
+        <h1 class="text-2xl text-center font-bold">
+          Sistem Informasi <br />
+          Rekomendasi Izin Penelitian
+        </h1>
+      </div>
+      <div
+        class="h-auto w-screen flex justify-center items-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pt-60"
+      >
+        <div class="h-auto py-10 px-10 bg-gray-200 my-10 mx-5">
+          <h1 class="pb-5 text-center">Sign in to start your session</h1>
+          <form class="space-y-6" action="">
+            <div class="relative mb-6">
+              <div
+                class="flex absolute inset-y-0 right-0 items-center px-3 pointer-events-none"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-gray-500"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <input
+                type="text"
+                id="input-group-1"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 w-full py-3 pr-32"
+                tabindex="0"
+                placeholder="Username"
+              />
+            </div>
+            <div class="relative mb-6">
+              <div class="flex absolute inset-y-0 right-0 items-center px-3">
+                <a
+                  type="button"
+                  id="PassReveal"
+                  class="cursor-pointer text-gray-500 hover:text-gray-400"
+                  onclick="RevealPass1();"
+                >
+                  <i class="fa fa-eye"></i>
+                </a>
+              </div>
+              <input
+                type="password"
+                id="PassLogin"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 w-full py-3 pr-32"
+                tabindex="0"
+                placeholder="Password"
+              />
+            </div>
+            <div class="grid grid-cols-1 gap-0 w-full h-full">
+              <div class="relative h-full w-full">
+                <input
+                  id="btnrefresh"
+                  type="button"
+                  class="p-3.5 absolute top-2/4 right-0 bg-slate-500 hover:bg-slate-600 text-white"
+                  value="refresh"
+                  onclick="GenerateCaptcha();"
+                />
+              </div>
+              <input
+                readonly
+                
+                type="text"
+                id="txtCaptcha"
+                class="cursor-default ring-0 text-left border-none bg-green-400 font-bold text-3xl text-white font-captcha"
+              />
+              <input
+                type="text"
+                class="border-gray-300"
+                placeholder="Captcha Code"
+                id="txtCompare"
+              />
+            </div>
+
+            <button
+              id="btnValid"
+              type="submit"
+              class="w-full bg-blue-400 text-white p-2 rounded-md"
+              onclick="alert(ValidCaptcha());"
+            >
+              Sign In
+            </button>
+            <a
+              href="Register.html"
+              type="button"
+              class="w-full bg-red-500 text-white p-2 rounded-md text-center"
+            >
+              Register
+            </a>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="./node_modules/flowbite/dist/flowbite.js"></script>
+  </body>
+</html>

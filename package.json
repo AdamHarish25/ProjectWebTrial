@@ -1,0 +1,22 @@
+{
+  "name": "projectbaru",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./CssOnly/Input.css -o ./CssOnly/Output.css --watch",
+    "prod": "npx tailwindcss -i ./CssOnly/Input.css -o ./CssOnly/Output.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.13",
+    "tailwindcss": "^3.0.24"
+  },
+  "dependencies": {
+    "flowbite": "^1.4.5"
+  }
+}
